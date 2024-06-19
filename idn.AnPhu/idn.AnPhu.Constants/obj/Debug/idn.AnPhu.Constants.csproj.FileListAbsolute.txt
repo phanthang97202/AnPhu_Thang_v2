@@ -1,0 +1,12 @@
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.dll
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.pdb
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.AssemblyReference.cache
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.CoreCompileInputs.cache
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.dll
+D:\MVC_iDocNet\MyWebsite\AnPhu_Van\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.pdb
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.dll
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.pdb
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.AssemblyReference.cache
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.CoreCompileInputs.cache
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.dll
+D:\MVC_iDocNet\MyWebsite\AnPhu_Thang\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.pdb

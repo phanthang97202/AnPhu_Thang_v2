@@ -1,0 +1,68 @@
+﻿@model idn.AnPhu.Website.Models.LoginModel
+
+@{
+    ViewBag.Title = "Đăng nhập hệ thống";
+    Layout = "~/Areas/Auth/Views/Shared/_LayoutAuthLogin.cshtml";
+}
+
+<div class="position-relative">
+    <div id="login-box" class="login-box visible widget-box no-border">
+        <div class="widget-body">
+            <div class="widget-main">
+                <h4 class="header blue lighter bigger">
+                    <i class="ace-icon fa fa-coffee green"></i>
+                    Please Enter Your Information
+                </h4>
+
+                <div class="space-6"></div>
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "manageForm", @class = "form-horizontal", returnUrl = ViewBag.ReturnUrl }))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" id="returnUrl" value="@ViewBag.ReturnUrl" />
+                    <fieldset>
+                        <label class="block clearfix">
+                            <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Username" id="UserName" name="UserName" required autofocus />
+                                <i class="ace-icon fa fa-user"></i>
+                            </span>
+                        </label>
+                        <label class="block clearfix">
+                            <span class="block input-icon input-icon-right">
+                                <input type="password" class="form-control" placeholder="Password" name="Password" id="Password" required />
+                                <i class="ace-icon fa fa-lock"></i>
+                            </span>
+                        </label>
+                        <div class="space"></div>
+                        <div class="clearfix">
+                            <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl">Remember Me</span>
+                            </label>
+
+
+                            <input type="submit" class="width-35 pull-right btn btn-sm btn-primary ace-icon fa fa-key" value="Login" />
+                            @*<i class="ace-icon fa fa-key"></i>
+                                <span class="bigger-110">Login</span>
+                            *@
+                        </div>
+                        <div class="space-4"></div>
+                    </fieldset>
+                }
+
+
+                <div class="space-6"></div>
+            </div><!-- /.widget-main -->
+
+
+        </div><!-- /.widget-body -->
+    </div><!-- /.login-box -->
+</div><!-- /.position-relative -->
+
+<script type="text/javascript">
+
+    processAjaxForm($('#manageForm'), function (response) {
+        processAjaxFormResult(response);
+    });
+</script>
+
+

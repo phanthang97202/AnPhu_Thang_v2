@@ -1,0 +1,18 @@
+﻿@*Thư viện khai báo CSS*@
+@Styles.Render("~/Content/admin-bootstrap-ace")
+@Styles.Render("~/Content/admin-jquery-ui-css")
+
+
+@*CSS Fix IE*@
+<!--[if IE 9]>
+    @Styles.Render("~/Content/bootstrap-fix-ie9")
+<![endif]-->
+<!--[if lte IE 8]>
+    @Styles.Render("~/Content/bootstrap-fix-ie8")
+<![endif]-->
+@*Script Fix Html5 - CSS3*@
+<!--[if lte IE 8]>
+    @Scripts.Render("~/bundles/support-ie")
+<![endif]-->
+
+@Styles.Render("~/Content/admin-css")

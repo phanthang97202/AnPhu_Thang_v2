@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{877DA28F-3228-4DCA-BE1C-AA492A351FA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>idn.AnPhu.Biz</RootNamespace>
+    <AssemblyName>idn.AnPhu.Biz</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client.Core">
+      <HintPath>..\..\05.Refs\dlls\Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\PrdCategories.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductProperties.cs" />
+    <Compile Include="Models\ProductReviews.cs" />
+    <Compile Include="Models\ProductVersions.cs" />
+    <Compile Include="Models\Sign_In.cs" />
+    <Compile Include="Models\Sys_Group.cs" />
+    <Compile Include="Models\Sys_Permission.cs" />
+    <Compile Include="Models\Sys_PermissionInGroup.cs" />
+    <Compile Include="Models\Sys_User.cs" />
+    <Compile Include="Models\Sys_UserInGroup.cs" />
+    <Compile Include="Persistance\Caching\CacheDataProviderBase.cs" />
+    <Compile Include="Persistance\Interface\IImportableDataProvider.cs" />
+    <Compile Include="Persistance\Interface\IProductPropertiesProvider.cs" />
+    <Compile Include="Persistance\Interface\IPrdCategoriesProvider.cs" />
+    <Compile Include="Persistance\Interface\IProductProvider.cs" />
+    <Compile Include="Persistance\Interface\IProductReviewsProvider.cs" />
+    <Compile Include="Persistance\Interface\IProductVersionsProvider.cs" />
+    <Compile Include="Persistance\Interface\ISys_GroupProvider.cs" />
+    <Compile Include="Persistance\Interface\ISys_UserProvider.cs" />
+    <Compile Include="Persistance\SqlServer\PrdCategoriesProvider.cs" />
+    <Compile Include="Persistance\SqlServer\ProductPropertiesProvider.cs" />
+    <Compile Include="Persistance\SqlServer\ProductProvider.cs" />
+    <Compile Include="Persistance\SqlServer\ProductReviewsProvider.cs" />
+    <Compile Include="Persistance\SqlServer\ProductVersionsProvider.cs" />
+    <Compile Include="Persistance\SqlServer\Sys_GroupProvider.cs" />
+    <Compile Include="Persistance\SqlServer\Sys_UserProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PrdCategoriesManager.cs" />
+    <Compile Include="Services\ProductManager.cs" />
+    <Compile Include="Services\ProductPropertiesManager.cs" />
+    <Compile Include="Services\ProductReviewsManager.cs" />
+    <Compile Include="Services\ProductVersionsManager.cs" />
+    <Compile Include="Services\ServiceFactory.cs" />
+    <Compile Include="Services\Sys_GroupManager.cs" />
+    <Compile Include="Services\Sys_UserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\idn.AnPhu.Constants\idn.AnPhu.Constants.csproj">
+      <Project>{9ed27e31-31a8-4849-9047-43993a9a3091}</Project>
+      <Name>idn.AnPhu.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\idn.AnPhu.Utils\idn.AnPhu.Utils.csproj">
+      <Project>{bc5eaaeb-0093-4f85-9eb9-77990ff36e5b}</Project>
+      <Name>idn.AnPhu.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

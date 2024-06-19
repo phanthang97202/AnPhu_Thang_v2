@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|d:\\mvc_idocnet\\mywebsite\\anphu_thang\\idn.anphu\\idn.anphu.website\\areas\\auth\\views\\productreviews\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|solutionrelative:idn.anphu.website\\areas\\auth\\views\\productreviews\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|d:\\mvc_idocnet\\mywebsite\\anphu_thang\\idn.anphu\\idn.anphu.website\\areas\\auth\\views\\productreviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|solutionrelative:idn.anphu.website\\areas\\auth\\views\\productreviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|d:\\mvc_idocnet\\mywebsite\\anphu_thang\\idn.anphu\\idn.anphu.website\\areas\\auth\\controllers\\productreviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|solutionrelative:idn.anphu.website\\areas\\auth\\controllers\\productreviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.anphu.website\\areas\\auth\\autharearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|solutionrelative:idn.anphu.website\\areas\\auth\\autharearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|d:\\mvc_idocnet\\mywebsite\\anphu_thang\\idn.anphu\\idn.anphu.website\\areas\\auth\\controllers\\productpropertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0740E811-C720-427F-9D2D-8A2BD96BB6C8}|idn.AnPhu.Website\\idn.AnPhu.Website.csproj|solutionrelative:idn.anphu.website\\areas\\auth\\controllers\\productpropertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 670,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Update.cshtml",
+              "RelativeDocumentMoniker": "idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Update.cshtml",
+              "ToolTip": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Update.cshtml",
+              "RelativeToolTip": "idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Update.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAOgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-19T16:28:31.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Create.cshtml",
+              "RelativeDocumentMoniker": "idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Create.cshtml",
+              "ToolTip": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Create.cshtml",
+              "RelativeToolTip": "idn.AnPhu.Website\\Areas\\Auth\\Views\\ProductReviews\\Create.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAALQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-19T16:09:38.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductReviewsController.cs",
+              "DocumentMoniker": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductReviewsController.cs",
+              "RelativeDocumentMoniker": "idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductReviewsController.cs",
+              "ToolTip": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductReviewsController.cs",
+              "RelativeToolTip": "idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductReviewsController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAuwEcAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T15:51:22.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthAreaRegistration.cs",
+              "DocumentMoniker": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\AuthAreaRegistration.cs",
+              "RelativeDocumentMoniker": "idn.AnPhu.Website\\Areas\\Auth\\AuthAreaRegistration.cs",
+              "ToolTip": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\AuthAreaRegistration.cs",
+              "RelativeToolTip": "idn.AnPhu.Website\\Areas\\Auth\\AuthAreaRegistration.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAkwM8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T09:39:32.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductPropertiesController.cs",
+              "DocumentMoniker": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductPropertiesController.cs",
+              "RelativeDocumentMoniker": "idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductPropertiesController.cs",
+              "ToolTip": "D:\\MVC_iDocNet\\MyWebsite\\AnPhu_Thang\\idn.AnPhu\\idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductPropertiesController.cs",
+              "RelativeToolTip": "idn.AnPhu.Website\\Areas\\Auth\\Controllers\\ProductPropertiesController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwEUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T16:04:20.973Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

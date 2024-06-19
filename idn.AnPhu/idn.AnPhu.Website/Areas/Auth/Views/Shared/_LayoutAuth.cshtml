@@ -1,0 +1,148 @@
+﻿@{
+    var title = ViewBag.Title as string ?? "";
+    var viewBagTitle = "Administrator";
+    if (title.Trim().Length > 0)
+    {
+        viewBagTitle = " :: " + MvcHtmlString.Create(viewBagTitle) + " :: || :: " + MvcHtmlString.Create(title) + " :: ";
+    }
+    var year = ViewBag.Year as string;
+    if (CUtils.IsNullOrEmpty(year))
+    {
+        year = DateTime.Now.Year.ToString();
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Html.Partial("StyleSheetAuthLogin_Init")*@
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/xpexkui2wt6x0dv6vwafp5mt3v4o8z3pxc81q1nxtlfb4ik4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+    @Html.Partial("StyleSheetAuth_Init")
+
+    @*Chèn CSS tại trang con nếu cần*@
+    @RenderSection("StyleSheet", required: false)
+    @*@Html.ActionLinkLocalized("Home", "Index", "Home")*@
+
+</head>
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default ace-save-state fix-navbar">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-header pull-left navbar-header-fix">
+                <a href="@Url.ActionLocalized("Index", "Home", new { area = "" })" class="navbar-brand" title="@MvcHtmlString.Create(" Quay lại trang chủ")">
+                    <img class="logo" src="@Url.Content("~/Areas/Auth/Content/assets/images/logo/logo.png")" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                <ul class="nav ace-nav">
+
+                    <li class="light-blue dropdown-modal">
+                        @Html.Partial(Url.Content("~/Areas/Auth/Views/Shared/_LoginPartial.cshtml"))
+                    </li>
+                </ul>
+            </div>
+        </div><!-- /.navbar-container -->
+    </div>
+
+    <div class="main-container ace-save-state" id="main-container">
+        <script type="text/javascript">
+            try {
+                ace.settings.loadState('main-container');
+            } catch (e) { }
+        </script>
+
+        @Html.Partial(Url.Content("~/Areas/Auth/Views/Shared/_VerticalMenu.cshtml"))
+
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="@Url.ActionLocalized("Index", "Home" , new { area="Auth" })">
+                                <i class="ace-icon fa fa-home home-icon"></i>
+                            </a>
+                        </li>
+                    </ul><!-- /.breadcrumb -->
+                </div>
+
+                <div class="page-content">
+                    @RenderBody()
+
+                </div><!-- /.page-content -->
+            </div>
+
+        </div><!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+                        <span class="blue bolder">idocNet</span>
+                        Application &copy; 2008-@MvcHtmlString.Create(year)
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons">
+                        <a href="#">
+                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+    @Html.Partial("JavaScriptAuth_Init")
+    
+    <script type="text/javascript">
+    var editorOptions = {
+        script_url: "@Url.Content("~/scripts/tinymce/tiny_mce.js")",
+		    theme: "advanced",
+		    plugins: "safari,pagebreak,style,layer,table,save,advhr,netadvimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+		    // Theme options
+		    theme_advanced_buttons1: "netadvimage,|,save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+		    theme_advanced_buttons2: "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+		    theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+		    theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+		    theme_advanced_toolbar_location: "top",
+		    theme_advanced_toolbar_align: "left",
+		    theme_advanced_statusbar_location: "bottom",
+		    theme_advanced_resizing: true,
+		    width: "500",
+		    height: "300"
+		};
+    </script>
+    @*Chèn Scripts tại trang con nếu cần*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

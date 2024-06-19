@@ -1,0 +1,115 @@
+﻿@model PageInfo<PrdCategories>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Auth/Views/Shared/_LayoutAuth.cshtml";
+}
+
+@section StyleSheet {
+    <style>
+        .header-admin {
+            margin: 0 8px;
+            margin-bottom: 12px;
+            font-size: 24px;
+            font-weight: lighter;
+            color: #2679b5;
+            border-bottom: 1px dotted #e2e2e2;
+            padding-bottom: 16px;
+            padding-top: 7px;
+        }
+    </style>
+
+}
+
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li>
+        <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+        <li><a href="@Url.Action("Index", "PrdCategories")">Danh sách loại xe</a></li>
+    </ul> 
+</div>
+
+<div class="main-container" id="main-container">
+    <div class="header-admin">
+        <div>
+            <p>Danh sách loại xe</p>
+        </div>
+
+    </div>
+    <table id="example" class="display" width="100%"></table>
+    <div class="">
+        <a href="/vi/quan-tri/danh-muc-san-pham/tao-moi" class="btn btn-success">Tạo mới</a>
+    </div>
+</div><!-- /.main-container -->
+
+@section Scripts {
+    <script>
+
+         $(document).ready(function() {
+            const dataSet = @Html.Raw(ViewBag.JsonDataList);
+            console.log(dataSet);
+
+             const formattedDataSet = dataSet.map(r => [
+                r.PrdCategoryId,
+                r.PrdCategoryTitle,
+                r.CreateBy,
+                r.CreateDate,
+                r.IsActive,
+            ]);
+
+             $('#example').DataTable({
+                 columns: [
+                     { title: 'PrdCategoryId' },
+                     { title: 'PrdCategoryTitle' },
+                     { title: 'CreateBy' },
+                     { title: 'CreateDate' },
+                     { title: 'IsActive' },
+                     {
+                         title: 'Actions',
+                         render: function (data, type, row) { 
+                             console.log('rest', data, type, row) 
+                             //return '<span class="green btn-detail" data-id="' + row[0] + '"> <i class="ace - icon fa fa - pencil - square - o bigger - 120"></i> </span>'
+                             return '<button class="btn btn-primary btn-detail" data-id="' + row[0] + '">Edit</button>';
+                         }
+                     }
+                ],
+                 data: formattedDataSet,
+                 columnDefs: [
+                     {
+                         targets: 0, // Targeting the PrdCategoryId column
+                         visible: false // Hides the PrdCategoryId column
+                     },
+                     {
+                         targets: 3,
+                         render: function (data, type, row, meta) {
+                             // const date = new Date(data)
+                             //const formatDate = date.getFullYear().toString() + date.getMonth().toString() + date.getDay().toString() + date.getHours().toString() + date.getMinutes().toString() + date.getSeconds().toString()
+                             //return dateFns.format(new Date(r.StartDate), 'yyyy-MM-dd HH:mm:ss');
+                             return data
+                         }
+                     },
+                     {
+                         targets: 4,
+                         render: function (data, type, row, meta) {
+                             if (type === 'display') {
+                                 return data === true ? '<span class="label label-sm label-success">Is Active</span>' : '<span class="label label-sm label-danger">UnActive</span>';
+                             }
+                             return data;
+                         }
+                     }
+                 ],
+                 lengthMenu: [[5, 10, 15], [5, 10, 15]]
+             });
+
+             $('#example').on('click', '.btn-detail', function () {
+                 debugger
+                 var id = $(this).data('id');
+                 const urlAction = "/vi/quan-tri/danh-muc-san-pham/cap-nhat?prdCategoryId=" + id
+                 window.location.href = urlAction  
+             });
+        });
+    </script>
+
+}

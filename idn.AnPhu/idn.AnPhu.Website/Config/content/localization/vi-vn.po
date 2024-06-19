@@ -1,0 +1,56 @@
+﻿
+# Nearforums PO file - en-US
+# PO File format: http://www.gnu.org/s/hello/manual/gettext/PO-Files.html
+# This file is distributed under the MIT license: http://nearforums.codeplex.com/license
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Index.cshtml
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Save"
+msgstr "Lưu"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Avatar"
+msgstr "Ảnh đại diện"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "UserCode"
+msgstr "Mã người dùng"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "FullName"
+msgstr "Họ và tên"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "PhoneNo"
+msgstr "Điện thoại"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "ConfirmPassword"
+msgstr "Nhập lại mật khẩu"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "BirthDay"
+msgstr "Ngày sinh"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Sex"
+msgstr "Giới tính"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "IsSysAdmin"
+msgstr "Quyền quản trị"
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Create.cshtml
+msgid "Sex"
+msgstr "Giới tính"

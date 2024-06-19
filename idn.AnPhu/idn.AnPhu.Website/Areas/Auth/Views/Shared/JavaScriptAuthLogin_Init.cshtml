@@ -1,0 +1,19 @@
+﻿@*Thư viện Jquery - Bootstrap*@
+@Scripts.Render("~/bundles/admin-jquery-library")
+<!--[if lte IE 8]>
+    @Scripts.Render("~/bundles/admin-jquery-library-lte-ie8")
+<![endif]-->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='@Url.Content("~/Areas/Auth/Content/assets/js/jquery-2.1.4.min.js")'>" + "<" + "/script>");
+</script>
+<!-- basic scripts -->
+<script type="text/javascript">
+    if ('ontouchstart' in document.documentElement) document.write("<script src='@Url.Content("~/Areas/Auth/Content/assets/js/jquery.mobile.custom.min.js")'>" + "<" + "/script>");
+</script>
+@Scripts.Render("~/bundles/admin-jquery-bootstrap")
+@Scripts.Render("~/bundles/admin-jquery-ace")
+@Scripts.Render("~/bundles/admin-jquery-show-dialog")
+@Scripts.Render("~/bundles/admin-jquery-validate")
+@Scripts.Render("~/bundles/admin-jquery-library")
+@Html.Partial(Url.Content("~/Areas/Auth/Views/Shared/_loading.cshtml"))
+@*@Html.Partial("_loading")*@

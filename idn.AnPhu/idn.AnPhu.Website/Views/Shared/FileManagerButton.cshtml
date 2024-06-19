@@ -1,0 +1,72 @@
+﻿@model string
+@{
+    var id = "id" + Math.Abs(Guid.NewGuid().GetHashCode()).ToString();
+
+    var functionName = "f_" + id;
+}
+<div style="display: none;">
+    <textarea id="@id"></textarea>
+</div>
+<input type="button" id="btn-@id" value="Browse.." class="btn btn-sm btn-success" />
+@*<script src="~/Scripts/tinymce/tiny_mce.js"></script>*@
+@*@Html.Script("~/scripts/tinymce/jquery.tinymce.js")*@
+<script type="text/javascript">
+
+		var _editorOptions = {
+			script_url: "@Url.Content("~/Scripts/tinymce/tiny_mce.js")",
+			 theme: "advanced",
+                plugins: "netadvimage"
+
+
+		};
+
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		tinyMCE.init({
+
+	        // General options
+	        mode: "exact",
+	        elements: "@id",
+        theme: "advanced",
+        plugins: "netadvimage"
+		});
+	});
+
+
+	$('#btn-@id').click(function () {
+
+	    //tinymce.get('@id').plugins.netadvimage.getInfo();
+		var b = tinymce.get('@id').execCommand("mceNetAdvImagePickup");
+
+		var ed = tinymce.get('@id');
+
+		var initialValue = ed.getContent();
+
+
+		function testForChange() {
+			if (ed.getContent() != initialValue) {
+				// Do the button hiding stuff
+				window.clearInterval(timer);
+
+
+
+				var c = ed.getContent();
+
+
+				c = c.replace('<p>', '').replace('</p>','');
+				c = c.replace(/^[^\/]*(?:\/[^\/]*){2}/, "");
+
+				$('#@Model').val(c);
+
+			}
+		}
+
+		var timer = window.setInterval(function () {
+			testForChange();
+		}, 100);
+
+	});
+</script>
+

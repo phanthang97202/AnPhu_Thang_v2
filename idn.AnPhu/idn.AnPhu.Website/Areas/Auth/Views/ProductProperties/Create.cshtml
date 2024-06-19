@@ -1,0 +1,101 @@
+﻿@model idn.AnPhu.Biz.Models.ProductProperties
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="#">Home</a>
+    </li>
+    <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+    <li><a href="@Url.Action("Index", "Product")">Danh sách xe</a></li>
+    <li><a href="@Url.Action("Index", "ProductProperties")">Danh sách thuộc tính</a></li>
+    @if (ViewBag.IsEdit != null && ViewBag.IsEdit == true)
+    {
+        <li class="active">@Model.ProductPropertyTitle</li>
+    }
+    else
+    {
+        <li class="active">Tạo mới thuộc tính</li>
+    }
+</ul>
+@using (Html.BeginForm("Create", "ProductProperties", FormMethod.Post, new { }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>ProductProperties</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.ProductId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductPropertyTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductPropertyTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductPropertyTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="form-field-2">
+                Nội dung
+            </label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductPropertyBody, new { htmlAttributes = new { @class = "form-control" } })
+                <textarea type="text" id="ProductPropertyBodyController" rows="2" class=""></textarea>
+                @Html.ValidationMessageFor(model => model.ProductPropertyBody, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OrderNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OrderNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OrderNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/xpexkui2wt6x0dv6vwafp5mt3v4o8z3pxc81q1nxtlfb4ik4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: "#ProductPropertyBodyController", // selector dom
+            plugins: 'code',
+            init_instance_callback: function (editor) {
+                editor.on('change', function (e) { // set value whenever input change in tinymce
+                    debugger
+                    var value = tinymce.get("ProductPropertyBodyController").getContent(); // get value from tinymce tool
+                    $('#ProductPropertyBody').val(value); // assign value into input value
+                });
+            }
+        });
+
+    </script>
+
+}

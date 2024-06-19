@@ -1,0 +1,37 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+        <img class="nav-user-photo" src="@Url.Content("~/Areas/Auth/Content/assets/images/avatars/avatar2.png")" alt="avatar" />
+        <span class="user-info">
+            <small style="text-transform: uppercase;">@MvcHtmlString.Create(ViewBag.Fullname),</small>
+            @MvcHtmlString.Create(ViewBag.CompanyName)
+        </span>
+
+        <i class="ace-icon fa fa-caret-down"></i>
+    </a>
+
+
+    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+        <li>
+            <a href="javascript:" id="Profile">
+                <i class="ace-icon fa fa-user"></i>
+                Đổi mật khẩu
+            </a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li>
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", area = "Auth" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <a href="javascript:document.getElementById('logoutForm').submit()" style="padding: 4px 12px;" class="logout">
+                    <i class="ace-icon fa fa-power-off"></i>
+                    Log off
+                </a>}
+        </li>
+    </ul>
+
+
+}

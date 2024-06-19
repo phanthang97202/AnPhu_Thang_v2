@@ -1,0 +1,167 @@
+﻿/*@import url("/Content/roboto-font/fonts.css");*/
+body {
+    font-size: 14px;
+}
+
+.disabled-fix {
+    pointer-events: none;
+    opacity: 1;
+    background-color: #f5f5f5 !important;
+}
+
+.disabled-checkbox-fix {
+    pointer-events: none;
+    opacity: 1;
+    /*background-color: #f5f5f5 !important;*/
+}
+
+.scrollable-horizontal-height .scroll-track.scroll-hz {
+    height: 12px !important;
+}
+
+.ace-scroll:hover .scroll-active, .scroll-active.scroll-track.active, .scroll-active.scroll-track.scroll-hover, .scroll-active.scroll-track:active, .scroll-active.scroll-track:hover {
+    width: 12px !important;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+/* Logo */
+.ace-nav > li > a {
+    padding-top: 10px;
+}
+
+.fix-navbar {
+    /*background: #127053;*/
+    height: 60px;
+}
+
+    .fix-navbar .ace-nav, .fix-navbar .ace-nav > li {
+        height: 60px;
+    }
+
+.navbar-container {
+    padding-left: 0px;
+}
+
+.navbar-header-fix {
+    height: 60px;
+    width: 190px;
+    /*background-color: #32775c;*/
+}
+
+.navbar-header-fix .navbar-brand {
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.navbar .navbar-brand img.logo {
+    height: 60px;
+    width: 190px;
+}
+/* Date Picker */
+.datepicker table tr td.today {
+    background-color: #4f99c6;
+    border-color: #015f96;
+    color: #ffffff;
+}
+
+.datepicker table tr td.today:hover {
+    background-color: #7db7d8;
+    border-color: #72b4db;
+    color: #ffffff;
+}
+
+/*Table*/
+.table-bottom-0 {
+    margin-bottom: 0px !important;
+}
+.table-cus > thead > tr > th, .table-thead > thead > tr > th {
+    font-size: 14px;
+}
+.table-cus > tfoot > tr {
+    height: 55px;
+}
+
+.table-cus > tfoot > tr > td {
+    font-size: 15px;
+}
+
+.table-cus > thead > tr > th:last-child, .table-bordered-right > thead > tr > th:last-child {
+    border-right-color: #dddddd;
+}
+
+.table-cus > tbody > tr > td, .table-tbody > tbody > tr > td {
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.table-cus > thead > tr > th, .table-cus > tbody > tr > td, .table-cus > tfoot > tr > td,
+.table-thead > thead > tr > th, .table-thead > tbody > tr > td, .table-thead > tfoot > tr > td {
+    word-wrap: break-word !important;
+}
+.cell-50 {
+    min-width: 50px !important;
+    width: 50px !important;
+    max-width: 50px !important;
+}
+
+.cell-80 {
+    min-width: 80px !important;
+    width: 80px !important;
+    max-width: 80px !important;
+}
+
+.cell-100 {
+    min-width: 100px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+}
+
+.cell-120 {
+    min-width: 120px !important;
+    width: 120px !important;
+    max-width: 120px !important;
+}
+
+.cell-150 {
+    min-width: 150px !important;
+    width: 150px !important;
+    max-width: 150px !important;
+}
+
+.cell-200 {
+    min-width: 200px !important;
+    width: 200px !important;
+    max-width: 200px !important;
+}
+
+.cell-300 {
+    min-width: 300px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+}
+
+.cell-350 {
+    min-width: 350px !important;
+    width: 350px !important;
+    max-width: 350px !important;
+}
+/*Quan ly*/
+.img-icon {
+    height: 16px;
+}
+
+.icon-detail {
+    color: #337ab7 !important;
+}
+
+.icon-edit {
+    color: #127053 !important;
+}
+
+.icon-delete {
+    color: #ff0000 !important;
+}

@@ -1,0 +1,220 @@
+﻿
+
+<style>
+    .btn_avar {
+        font-size: 14px;
+        font-weight: 600;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="~/Areas/Auth/Content/assets/css/select2.min.css" />
+</head>
+<div class="page-content">
+    <div class="page-header">
+        <h1>
+            Thông tin người dùng
+            @* <small>
+                    <i class="ace-icon fa fa-angle-double-right"></i>
+                    Common form elements and layouts
+                </small>*@
+        </h1>
+    </div>
+
+    <div class="row" style="padding-top:50px">
+        <div class="col-lg-2 col-md-2 col-xs-12">
+            <div>
+                <img src="~/Areas/Auth/Content/assets/images/avatars/profile-pic.jpg" class="img-responsive" />
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Usercode  </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="UserCode" name="UserCode" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Họ và tên  </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="FullName" name="FullName" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Email  </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="Email" name="Email" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Số điện thoại </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="PhoneNo" name="PhoneNo" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Mật khẩu  </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="PassWord" name="PassWord" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Nhập lại mật khẩu  </label>
+
+                    <div class="col-sm-8">
+                        <input type="text" id="PassWord" name="PassWord" class="col-xs-10 col-sm-5 col-lg-10" disabled />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày sinh </label>
+
+                    <div class="col-sm-9">
+                        <div class="input-group " id="dtpkdtfrom">
+                            <input type="text" id="BirthDay" name="BirthDay" class="form-control pkdtfrom" data-date-format="yyyy-mm-dd" disabled />
+                            <span class="input-group-addon">
+                                <i class="fa fa-calendar bigger-110"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="cars">Giới tính</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <select class="col-xs-12 col-sm-12" name="Sex" id="Sex" disabled>
+                            <option value="volvo">---</option>
+                            <option value="saab">Nam</option>
+                            <option value="opel">Nữ</option>
+                            <option value="audi">Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right ">Quyền admin</label>
+                    <label class="col-sm-9">
+                        <input id="isSysAdmin" name="isSysAdmin" class="ace ace-switch" type="checkbox" disabled />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right ">Active</label>
+                    <label class="col-sm-9">
+                        <input id="FlagActive" name="FlagActive" class="ace ace-switch" type="checkbox" disabled />
+                        <span class="lbl"></span>
+                    </label>
+                </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('.input-daterange').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            format: 'yyyy-mm-dd'
+        })//show datepicker when clicking on the icon
+            .next().on(ace.click_event, function () {
+                $(this).prev().focus();
+            });
+        $('#pkdtfrom, #pkdtto').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            format: 'yyyy-mm-dd'
+        })//show datepicker when clicking on the icon
+            .next().on(ace.click_event, function () {
+                $(this).prev().focus();
+            });
+
+        $('#BirthDay, #BirthDay').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            format: 'yyyy-mm-dd'
+        })//show datepicker when clicking on the icon
+            .next().on(ace.click_event, function () {
+                $(this).prev().focus();
+            });
+
+    });
+
+    $(document).ready(function () {
+
+        $(".tooltip-detail, .tooltip-edit, .tooltip-delete").tooltip({
+            show: {
+                effect: "slideDown",
+                delay: 250
+            }
+        });
+
+        $('.scrollable-horizontal').each(function () {
+            var $this = $(this);
+            $(this).ace_scroll(
+                {
+                    horizontal: true,
+                    //styleClass: 'scroll-top',//show the scrollbars on top(default is bottom)
+                    size: $this.attr('data-size') || 6500,
+                    mouseWheelLock: true
+                }
+            ).css({ 'padding-top': 0 });
+        });
+    });
+    $('.scrollable').each(function () {
+        var $this = $(this);
+        $(this).ace_scroll({
+            //size: 500,
+            size: $this.attr('data-size') || 1000,
+            mouseWheelLock: true,
+            //styleClass: 'scroll-left scroll-margin scroll-thin scroll-dark scroll-light no-track scroll-visible'
+        });
+    });
+</script>
+<script>
+    //select2
+    $('.select2').css('width', '200px').select2({ allowClear: true })
+    $('#select2-multiple-style .btn').on('click', function (e) {
+        var target = $(this).find('input[type=radio]');
+        var which = parseInt(target.val());
+        if (which == 2) $('.select2').addClass('tag-input-style');
+        else $('.select2').removeClass('tag-input-style');
+    });
+
+    //////////////////
+    $('.multiselect').multiselect({
+        enableFiltering: true,
+        enableHTML: true,
+        buttonClass: 'btn btn-white btn-primary',
+        templates: {
+            button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
+            ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+            filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+            filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+            li: '<li><a tabindex="0"><label></label></a></li>',
+            divider: '<li class="multiselect-item divider"></li>',
+            liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
+        }
+    });
+
+    $(document).one('ajaxloadstart.page', function (e) {
+        $('[class*=select2]').remove();
+        $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
+        $('.rating').raty('destroy');
+        $('.multiselect').multiselect('destroy');
+    });
+</script>
+<script src="~/Areas/Auth/Content/assets/js/select2.min.js"></script>

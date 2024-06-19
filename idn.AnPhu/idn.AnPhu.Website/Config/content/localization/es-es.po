@@ -1,0 +1,7 @@
+﻿# Nearforums PO file - es-ES
+# PO File format: http://www.gnu.org/s/hello/manual/gettext/PO-Files.html
+# This file is distributed under the MIT license: http://nearforums.codeplex.com/license
+
+#: idn.AnPhu.Website\Areas\Auth\Views\Sys_User\Index.cshtml
+msgid "Admin Dashboard"
+msgstr "Panel de administración"

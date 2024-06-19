@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+    var message = ViewData["Message"] as string;
+    var detail = ViewData["Detail"] as string;
+}
+<div style="font: 500 14px/20px arial; width: 100%; padding: 5px 0 5px 0; float: left;">
+    <span style="padding-left: 20px;">
+        <span>Lỗi: </span>
+
+        <span style="color: #e00; font-weight: 700;">@MvcHtmlString.Create(message)</span>
+    </span>
+</div>
+<div style="width: 100%; float: left; display:none;" id="error_detail_panel">
+
+    <div class="error_detail_panel">
+        <p style="padding: 20px; font: 500 12px/20px arial;">@MvcHtmlString.Create(detail)</p>
+    </div>
+</div>
+
+
+<div style="padding:0px 20px; float:left;">
+    <a href="javascript:;" onclick="document.getElementById('error_detail_panel').style.display = 'block'; this.style.display='none';" class="">Chi tiết</a>
+</div>
+
+
+
+
